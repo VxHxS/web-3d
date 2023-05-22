@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  z-index: 1;
+  font-family: sans-serif;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+main {
+  position: relative; /* Заменено на относительное позиционирование */
+  z-index: 3;
+  width: 100%;
+  font-size: 32px;
+  color: #000000;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+main section {
+  width: 50%;
+  padding: 100px 0px;
+  height: 100vh;
+}
+
+main section p {
+  padding: 5%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+main section:nth-child(2) {
+  margin-left: 50%;
+}
+
+main section:nth-child(4) {
+  margin-left: 50%;
+}
+
+#DIV1 {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+#DIV2 {
+  height: 150px;
+  border: 1px solid black;
+  background-color: coral;
+  aspect-ratio: 1;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  33% {
+    aspect-ratio: 0.5;
+  }
+  66% {
+    aspect-ratio: 2;
+  }
+}
+
+#DIV2original {
+  position: absolute;
+  z-index: -1;
+  height: 150px;
+  aspect-ratio: 1;
+  border: 1px dashed grey;
+  background-color: lightgrey;
+  opacity: 0.5;
+}
+
+footer {
+  background-color: #f2f2f2; /* Цвет фона */
+  padding: 20px; /* Отступы внутри футера */
+}
+
+footer p {
+  margin: 0; /* Убираем отступы внутри абзацев */
+}
